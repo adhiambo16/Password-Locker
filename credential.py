@@ -23,7 +23,7 @@ class Credential:
                     return credential
 
     @classmethod
-    def contact_exist(cls,accountname):
+    def credential_exist(cls,accountname):
         '''
         Method that checks if a credential exists from the credential list.
         Args:
