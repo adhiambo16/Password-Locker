@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 from credential import Credential
+from Userlogin import User 
 
 
 def create_credential(accountname,password,email):
@@ -68,7 +69,7 @@ def main():
 
                             save_credential(create_credential((accountname,password,e_address)) # create and save new credential.
                             print ('\n')
-                            print(f"New Credential {accountname} created")
+                            print (f"New Credential {accountname} created")
                             print ('\n')
 
                     elif short_code == 'dc':
