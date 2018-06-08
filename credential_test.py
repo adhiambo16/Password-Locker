@@ -79,19 +79,19 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(found_credential.email,test_credential.email)
 
     @classmethod
-    # def find_by_password(cls,password):
-    #     '''
-    #     Method that takes in a password and returns a credential that matches that password.
-    #
-    #     Args:
-    #         password: Password to search for
-    #     Returns :
-    #         Credential; of person that matches the password.
-    #     '''
-    #
-    #     for credential in cls.credential_list:
-    #         if credential.password == password:
-    #             return credential
+    def find_by_password(cls,password):
+        '''
+        Method that takes in a password and returns a credential that matches that password.
+
+        Args:
+            password: Password to search for
+        Returns :
+            Credential; of person that matches the password.
+        '''
+
+        for credential in cls.credential_list:
+            if credential.password == password:
+                return credential
 
 
 if __name__ == '__main__':
