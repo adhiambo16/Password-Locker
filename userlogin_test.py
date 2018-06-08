@@ -1,11 +1,41 @@
 import unittest # Importing the unittest module
 from  Userlogin import User # Importing the contact class
 
-class TestContact(unittest.TestCase):
+class TestUser(unittest.TestCase):
 
     '''
-    Test class that defines test cases for the contact class behaviours.
+    Test class that defines test cases for the user class behaviours.
 
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
     '''
+
+       # Items up here .......
+
+    def setUp(self):
+        '''
+        Set up method to run before each test cases.
+        '''
+        self.new_user = User("adhiambo16","katelyne3","adhiambolydia96@gmail.com") # create user object
+
+
+    def test_init(self):
+        '''
+        test_init test case to test if the object is initialized properly
+        '''
+
+        self.assertEqual(self.new_user.username,"adhiambo16")
+        self.assertEqual(self.new_user.password,"katelyne3")
+        self.assertEqual(self.new_user.email,"adhiambolydia96@gmail.com")
+
+    def test_save_user(self):
+        '''
+        test_save_user test case to test if the user object is saved into
+         the user list
+        '''
+        self.new_user.save_user() # saving the new contact
+        self.assertEqual(len(User.user_list),1)
+
+
+if __name__ == '__main__':
+    unittest.main()
