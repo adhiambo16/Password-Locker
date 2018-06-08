@@ -65,6 +65,33 @@ class TestCredential(unittest.TestCase):
             test_credential = Credential("facebook","0712345678","Moringaschool123") # new credential
             test_credential.save_credential()
             self.assertEqual(len(Credential.credential_list),2)
+    def test_find_credential_by_password(self):
+        '''
+        test to check if we can find a credential by phone number and display information
+        '''
+
+        self.new_credential.save_credential()
+        test_credential = Credential("facebook","0711223344","Moringaschool123") # new credential
+        test_credential.save_credential()
+
+        found_credential = Credential.find_by_password("0711223344")
+
+        self.assertEqual(found_credential.email,test_credential.email)
+
+    @classmethod
+    # def find_by_password(cls,password):
+    #     '''
+    #     Method that takes in a password and returns a credential that matches that password.
+    #
+    #     Args:
+    #         password: Password to search for
+    #     Returns :
+    #         Credential; of person that matches the password.
+    #     '''
+    #
+    #     for credential in cls.credential_list:
+    #         if credential.password == password:
+    #             return credential
 
 
 if __name__ == '__main__':
