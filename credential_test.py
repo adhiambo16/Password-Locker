@@ -50,10 +50,10 @@ class TestCredential(unittest.TestCase):
 
             # setup and class creation up here
     def tearDown(self):
-#             '''
-#             tearDown method that does clean up after each test case has run.
-#             '''
-#             Contact.contact_list = []
+            '''
+            tearDown method that does clean up after each test case has run.
+            '''
+            Contact.contact_list = []
 #
 # # other test cases here
 #     def test_save_multiple_credential(self):
