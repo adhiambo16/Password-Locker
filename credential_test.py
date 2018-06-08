@@ -16,13 +16,13 @@ class TestCredential(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-#         self.new_contact = Contact("James","Muriuki","0712345678","james@ms.com") # create contact object
-#
-#
-#     def test_init(self):
-#         '''
-#         test_init test case to test if the object is initialized properly
-#         '''
+        self.new_credential = Credential("facebook","0702769629","adhiambolydia96@gmail.com") # create contact object
+
+
+    def test_init(self):
+        '''
+        test_init test case to test if the object is initialized properly
+        '''
 #
 #         self.assertEqual(self.new_contact.first_name,"James")
 #         self.assertEqual(self.new_contact.last_name,"Muriuki")
