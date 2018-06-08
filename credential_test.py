@@ -34,7 +34,7 @@ class TestCredential(unittest.TestCase):
          the credential list
         '''
         self.new_credential.save_credential() # saving the new contact
-        self.assertEqual(len(Credential.credential_list),
+        self.assertEqual(len(Credential.credential_list),1),
 
 
 if __name__ == '__main__':
