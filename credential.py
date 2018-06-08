@@ -22,7 +22,20 @@ class Credential:
                 if credential.accountname == accountname:
                     return credential
 
+    @classmethod
+    def contact_exist(cls,accountname):
+        '''
+        Method that checks if a credential exists from the credential list.
+        Args:
+            accountname: Accountname to search if it exists
+        Returns :
+            Boolean: True or false depending if the credential exists
+        '''
+        for credential in cls.credential_list:
+            if credential.accountname == accountname:
+                    return True
 
+        return False
 
 
 
