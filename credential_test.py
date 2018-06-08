@@ -43,10 +43,10 @@ class TestCredential(unittest.TestCase):
             test_save_multiple_credential to check if we can save multiple credential
             objects to our credential_list
             '''
-            # self.new_contact.save_contact()
-            # test_contact = Contact("Test","user","0712345678","test@user.com") # new contact
-            # test_contact.save_contact()
-            # self.assertEqual(len(Contact.contact_list),2)
+            self.new_credential.save_credential()
+            test_credential= Credential("facebook",,"0712345678","test@user.com") # new credential
+            test_credential.save_credential()
+            self.assertEqual(len(Credential.credential_list),2)
 
 
 if __name__ == '__main__':
