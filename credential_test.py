@@ -14,7 +14,7 @@ class TestCredential(unittest.TestCase):
 
     def setUp(self):
         '''
-        Set up method to run before each test cases.
+        Set up method to run before each test cases.find_by_accountname
         '''
         self.new_credential = Credential("facebook","0702769629","adhiambolydia96@gmail.com") # create contact object
 
@@ -65,33 +65,34 @@ class TestCredential(unittest.TestCase):
             test_credential = Credential("facebook","0712345678","Moringaschool123") # new credential
             test_credential.save_credential()
             self.assertEqual(len(Credential.credential_list),2)
-    def test_find_credential_by_password(self):
+
+    def test_find_credential_by_accountname(self):
         '''
-        test to check if we can find a credential by phone number and display information
+        test to check if we can find a credential by accountname and display information
         '''
 
         self.new_credential.save_credential()
-        test_credential = Credential("facebook","0711223344","Moringaschool123") # new credential
+        test_credential = Credential("facebook","0712345678","adhiambolydia96@gmail.com") # new credential
         test_credential.save_credential()
 
-        found_credential = Credential.find_by_password("0711223344")
+        found_credential = Credential.find_by_accountname("facebook")
 
         self.assertEqual(found_credential.email,test_credential.email)
 
-    @classmethod
-    def find_by_password(cls,password):
-        '''
-        Method that takes in a password and returns a credential that matches that password.
 
-        Args:
-            password: Password to search for
-        Returns :
-            Credential; of person that matches the password.
+
+    def test_credential_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the credential.
         '''
 
-        for credential in cls.credential_list:
-            if credential.password == password:
-                return credential
+        self.new_credential.save_credential()
+        test_credential = Credential("facebook","0712345678","adhiambolydia96@gmail.com") # new credential
+        test_credential.save_credential()
+
+        credential_exists = Credential.credential_exist("facebook")
+
+        self.assertTrue(credential_exists)
 
 
 if __name__ == '__main__':
