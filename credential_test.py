@@ -9,13 +9,13 @@ class TestCredential(unittest.TestCase):
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
     '''
-#
-#       # Items up here .......
-#
-#     def setUp(self):
-#         '''
-#         Set up method to run before each test cases.
-#         '''
+
+      # Items up here .......
+
+    def setUp(self):
+        '''
+        Set up method to run before each test cases.
+        '''
 #         self.new_contact = Contact("James","Muriuki","0712345678","james@ms.com") # create contact object
 #
 #
