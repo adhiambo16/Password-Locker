@@ -29,5 +29,5 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.new_credential.email,"adhiambolydia96@gmail.com")
 
 
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()
