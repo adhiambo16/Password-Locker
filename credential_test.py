@@ -53,18 +53,18 @@ class TestCredential(unittest.TestCase):
             '''
             tearDown method that does clean up after each test case has run.
             '''
-            Contact.contact_list = []
-#
-# # other test cases here
-#     def test_save_multiple_credential(self):
-#             # '''
-            # test_save_multiple_credential to check if we can save multiple credential
-            # objects to our credential_list
-            # '''
-            # self.new_credential.save_credential()
-            # test_credential = Credential("Test","user","0712345678","test@user.com") # new credential
-            # test_credential.save_credential()
-            # self.assertEqual(len(Credential.credential_list),2)
+            Credential.credential_list = []
+
+# other test cases here
+    def test_save_multiple_credential(self):
+            '''
+            test_save_multiple_credential to check if we can save multiple credential
+            objects to our credential_list
+            '''
+            self.new_credential.save_credential()
+            test_credential = Credential("facebook","0712345678","Moringaschool123") # new credential
+            test_credential.save_credential()
+            self.assertEqual(len(Credential.credential_list),2)
 
 
 if __name__ == '__main__':
