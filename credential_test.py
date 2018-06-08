@@ -23,12 +23,11 @@ class TestCredential(unittest.TestCase):
         '''
         test_init test case to test if the object is initialized properly
         '''
-#
-#         self.assertEqual(self.new_contact.first_name,"James")
-#         self.assertEqual(self.new_contact.last_name,"Muriuki")
-#         self.assertEqual(self.new_contact.phone_number,"0712345678")
-#         self.assertEqual(self.new_contact.email,"james@ms.com")
-#
-#
+
+        self.assertEqual(self.new_credential.accountname,"facebook")
+        self.assertEqual(self.new_credential.password,"0702769629")
+        self.assertEqual(self.new_credential.email,"adhiambolydia96@gmail.com")
+
+
 # if __name__ == '__main__':
 #     unittest.main()
