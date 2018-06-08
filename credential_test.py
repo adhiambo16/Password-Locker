@@ -1,5 +1,7 @@
 import unittest # Importing the unittest module
 from credential import Credential # Importing the contact class
+import pyperclip
+
 
 class TestCredential(unittest.TestCase):
 
