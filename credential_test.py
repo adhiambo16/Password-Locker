@@ -1,5 +1,5 @@
 import unittest # Importing the unittest module
-# from credential import Credential # Importing the contact class
+from credential import Credential # Importing the contact class
 
 # class TestCredential(unittest.TestCase):
 #
