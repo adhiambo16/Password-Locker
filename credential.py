@@ -1,3 +1,4 @@
+import pyperclip
 class Credential:
     '''
     Class that generates new instances of credential.
@@ -44,6 +45,11 @@ class Credential:
         method that returns the credential list
         '''
         return cls.credential_list
+
+    @classmethod
+    def copy_email(cls,accountname):
+        credential_found = Credential.find_by_accountname(accountname)
+        pyperclip.copy(credential_found.email)
 
 
 
