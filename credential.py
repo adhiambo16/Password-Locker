@@ -12,7 +12,7 @@ class Credential:
         save_credential method saves credential objects into credential_list
         '''
 
-        # Contact.contact_list.append(self)
+        Credential.credential_list.append(self)
 
     def __init__(self,accountname,password,email):
 
