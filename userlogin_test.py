@@ -1,5 +1,5 @@
-# import unittest # Importing the unittest module
-# from  Userlogin import User # Importing the contact class
+import unittest # Importing the unittest module
+from  Userlogin import User # Importing the contact class
 #
 # class TestContact(unittest.TestCase):
 #
