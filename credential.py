@@ -1,4 +1,6 @@
 import pyperclip
+import random
+
 class Credential:
     '''
     Class that generates new instances of credential.
@@ -52,9 +54,20 @@ class Credential:
         pyperclip.copy(credential_found.email)
 
 
+    @classmethod
+    def gen_password(cls,username):
+           '''
+     method that returns the credential list
+           '''
+        letters=username[1:4]
+        num1=str(random.randit(0,9))
+        num2=str(random.randit(9,16))
+        gen_pass="!"num1+letters+num2+"$"+letters.upper()
+        return gen_pass
 
 
     # Init method
+
     def save_credential(self):
 
         '''
