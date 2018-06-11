@@ -31,10 +31,64 @@ class TestUser(unittest.TestCase):
     def test_save_user(self):
         '''
         test_save_user test case to test if the user object is saved into
-         the user list
+        the user list
         '''
         self.new_user.save_user() # saving the new contact
         self.assertEqual(len(User.user_list),1)
+
+
+
+
+            # setup and class creation up here
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        User.user_list = []
+
+                # Items  here...
+
+    def test_save_multiple_user(self):
+        '''
+        test_save_multiple_user to check if we can save multiple user
+        objects to our user_list
+        '''
+        self.new_user.save_user()
+        test_user = User("Test","0712345678","test@user.com") # new user
+        test_user.save_user()
+        self.assertEqual(len(User.user_list),2)
+
+    def test_find_user_by_username(self):
+        '''
+        test to check if we can find a user by username and display information
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Test","0712345678","test@user.com") # new user
+        test_user.save_user()
+
+        found_user = User.find_by_username("Test")
+
+        self.assertEqual(found_user.email,test_user.email)
+
+
+
+
+
+    def test_user_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the user.
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Test","0712345678","test@user.com") # new user
+        test_user.save_user()
+
+        user_exists = User.user_exist("Test")
+
+        self.assertTrue(user_exists)
+
+
 
 
 if __name__ == '__main__':
