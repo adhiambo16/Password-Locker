@@ -1,5 +1,5 @@
 # Password-Locker
-##This means that even if people manage to get your data, it is virtually impossible for them to crack your data even with supercomputers, unless they have access to your email account and PIN. Therefore never let anybody know your PIN to be safe, and change it often. 11/6/2018
+This means that even if people manage to get your data, it is virtually impossible for them to crack your data even with supercomputers, unless they have access to your email account and PIN. Therefore never let anybody know your PIN to be safe, and change it often. 11/6/2018
 #### By Lydia
 ## Description
 This is a project that manage all of my account details
