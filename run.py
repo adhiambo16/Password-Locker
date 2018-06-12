@@ -47,7 +47,7 @@ def create_user(username,password,email):
     new_user = User(username,password,email)
     return new_user
 
-def save_users(user):
+def save_user(user):
     '''
     Function to save user
     '''
@@ -80,7 +80,7 @@ def main():
     while True:
         print ("Use these short codes")
         print ("cc - create acc, lo -login, ex - exit app")
-        short_code = input().lower
+        short_code = input().lower()
         if short_code == 'cc':
 
             print("New User")
@@ -98,7 +98,8 @@ def main():
 
 
             save_user(user(username,password,email))
-            # print (f"\nNew User {username} created")
+            print(f"New User {username} created")
+            print('\n')
 
         elif short_code == 'lo':
             print("login to your account")
@@ -178,5 +179,4 @@ def main():
         else:
             print("I really didn't get that. Please use the short codes")
 if __name__ == '__main__':
-
     main()
