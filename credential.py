@@ -56,13 +56,13 @@ class Credential:
 
     @classmethod
     def gen_password(cls,username):
-           '''
-     method that returns the credential list
-           '''
+        '''
+        method that returns the credential list
+        '''
         letters=username[1:4]
         num1=str(random.randit(0,9))
         num2=str(random.randit(9,16))
-        gen_pass="!"num1+letters+num2+"$"+letters.upper()
+        gen_pass="!"+num1+letters+num2+"$"+letters.upper()
         return gen_pass
 
 
