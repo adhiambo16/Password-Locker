@@ -97,8 +97,8 @@ def main():
             print ('\n')
 
 
-            save_user(user(username,password,email))
-            print(f"New User {username} created")
+            save_user(User(Username,password,Email))
+            print(f"New User {Username} created")
             print('\n')
 
         elif short_code == 'lo':
